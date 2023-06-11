@@ -1,0 +1,28 @@
+body{
+    background-color: #DDFEFE;
+}
+
+
+#titulo{
+    color: white;
+}
+
+#pergunta{
+    color: white;
+}
+
+#resultado{
+    font-size: 30px;
+}
+
+#imagem{
+    align-self: center;
+    width: 120px;
+    height: 120px;
+}
+
+#caixa{
+    background-color: #5CCEEE;
+    border: green solid;
+    border-radius: 5px;
+}
