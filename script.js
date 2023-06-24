@@ -38,6 +38,8 @@ function iniciar() {
 }
 
 function verificar(verificar=0){
+    
+    let caixa_badges = window.document.getElementById('badges')
 
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -54,8 +56,25 @@ function verificar(verificar=0){
     //Erros e acertos
 
 
-    if(nivel == "facil" && modo == "adicao"){
+    if(nivel == "facil" && modo == "adicao e subtracao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+
+         //criando o badges
+        caixa_badges.innerHTML = ''
+
+        let badge = window.document.createElement('span')
+        badge.classList = 'badge badge-pill badge-info float-right'
+
+        let badge_nivel = window.document.createElement('span')
+        badge_nivel.classList = 'badge badge-pill badge-success float-right'
+        
+        badge_nivel.innerText = nivel
+        badge.innerText = modo
+
+        caixa_badges.appendChild(badge_nivel)
+        caixa_badges.appendChild(badge)
+
+
 
         let perguntas = new Array(
             {
@@ -119,8 +138,24 @@ function verificar(verificar=0){
 
         exibirPergunta(perguntas)
 
-    }else if(nivel == "normal" && modo == "adicao" ){
+    }else if(nivel == "normal" && modo == "adicao e subtracao" ){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        
+         //criando o badges
+         caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-info float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-warning  float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
 
         let perguntas = new Array(
             {
@@ -183,8 +218,22 @@ function verificar(verificar=0){
         )
         exibirPergunta(perguntas)
 
-    }else if(nivel == "dificil" && modo == "adicao"){
+    }else if(nivel == "dificil" && modo == "adicao e subtracao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-info float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-danger  float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
 
         let perguntas = new Array(
             {
@@ -250,6 +299,20 @@ function verificar(verificar=0){
     else if(nivel == "facil" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
 
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-primary float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-success  float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
+
         let perguntas = new Array(
             {
                 pergunta : "Para realizar um campeonato de vôlei em uma escola o professor de educação física decidiu dividir os 96 alunos em grupos. Sabendo que cada equipe para esse esporte deve ser composta por 6 pessoas, quantas equipes o professor conseguiu formar?",
@@ -312,6 +375,19 @@ function verificar(verificar=0){
         exibirPergunta(perguntas)
     }else if(nivel == "normal" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-primary float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-warning float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
 
         let perguntas = new Array(
             {
@@ -376,6 +452,20 @@ function verificar(verificar=0){
     }else if(nivel == "dificil" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
 
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-primary float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-danger  float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
+
         let perguntas = new Array(
             {
                 pergunta : "Ao realizar o planejamento de uma viagem utilizando gasolina como combustível, estimou-se que seria gasto um total de 32 litros na ida e 32 litros na volta. Se a gasolina estiver custando R$ 6,00, o valor gasto com combustível nessa viagem será igual a:",
@@ -439,6 +529,19 @@ function verificar(verificar=0){
     }
     else if(nivel == "facil" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-dark float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-success  float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
 
         let perguntas = new Array(
             {
@@ -504,6 +607,20 @@ function verificar(verificar=0){
     else if(nivel == "normal" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
 
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-dark float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-warning float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
+
         let perguntas = new Array(
             {
                 pergunta : "Juliana possui dois tapetes de mesma área. O tapete quadrado possui lado de 4 m e o tapete retangular tem altura de 2 m e base de 8 m. Qual tapete apresenta o maior perímetro?",
@@ -567,6 +684,22 @@ function verificar(verificar=0){
     }
     else if(nivel == "dificil" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        caixa_badges.innerHTML = ''
+ 
+         let badge = window.document.createElement('span')
+         badge.classList = 'badge badge-pill badge-dark float-right'
+ 
+         let badge_nivel = window.document.createElement('span')
+         badge_nivel.classList = 'badge badge-pill badge-danger float-right'
+         
+         badge_nivel.innerText = nivel
+         badge.innerText = modo
+ 
+         caixa_badges.appendChild(badge_nivel)
+         caixa_badges.appendChild(badge)
 
         let perguntas = new Array(
             {
@@ -643,6 +776,8 @@ function exibirPergunta(perguntas, atual=0){
     let selecione_caixa = window.document.getElementById('selecione_resposta');
     selecione_caixa.innerHTML = 'Selecione a resposta correta'
 
+   
+
 
     //caixa pergunta   
     let pergunta_content = document.getElementById('pergunta')
@@ -666,6 +801,9 @@ function exibirPergunta(perguntas, atual=0){
         let voltar_menu_caixa = window.document.getElementById('prox_pergunta');
         voltar_menu_caixa.innerHTML = `<i style="cursor:pointer; color:blue;" onclick="verificar(1)" class="fa-solid fa-rotate-left fa-2xl"></i> <a href="index.html"> <i class="fa-solid fa-house fa-2xl"></i> </a> `
 
+
+        let caixa_badges = window.document.getElementById('badges')
+        caixa_badges.innerHTML = ''
  
 
         pergunta_content.innerHTML = `Acertos: ${acertos} <br> Erros: ${erros}`
@@ -763,6 +901,8 @@ function botão_prox_pergunta(perguntas,atual){
     btn_prox.classList = "btn  btn-lg";
     btn_prox.style.backgroundColor = 'yellow'
     btn_prox.innerHTML = 'Próxima pergunta <i class="fa-solid fa-arrow-right"></i>'
+
+    
 
     btn_prox.addEventListener("click", function() {
             exibirPergunta(perguntas,atual)
