@@ -437,6 +437,134 @@ function verificar(verificar=0){
         )
         exibirPergunta(perguntas)
     }
+    else if(nivel == "facil" && modo == "geometria"){
+        console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        let perguntas = new Array(
+            {
+                pergunta : "Quantos graus mede um quadrado?",
+                resposta : "360°",
+                alternativas:
+                {
+                    alternativa1 :"180°",
+                    alternativa2 :"260°",
+                    alternativa3 :"340°",
+                    alternativa4 :"360°"
+                }
+              
+            },
+            {
+                pergunta : "Quantos graus mede um triângulo? (Considere um triângulo equilátero)",
+                resposta : "180°",
+                alternativas:
+                {
+                    alternativa1 :"90°",
+                    alternativa2 :"150°",
+                    alternativa3 :"180°",
+                    alternativa4 :"360°"
+                }
+            },
+            {
+                pergunta : "Quanto mede o maior ângulo de um triângulo retângulo?",
+                resposta : "90°",
+                alternativas:
+                {
+                    alternativa1 :"60°",
+                    alternativa2 :"90°",
+                    alternativa3 :"120°",
+                    alternativa4 :"180°",
+                }
+            },
+            {
+                pergunta : "Calcule o perímetro de um triângulo com dois lados de 6 cm e um lado com 12 cm.",
+                resposta : "24 cm",
+                alternativas:
+                {
+                    alternativa1 :"18 cm",
+                    alternativa2 :"20 cm",
+                    alternativa3 :"22 cm",
+                    alternativa4 :"24 cm",
+                }
+            },
+            {
+                pergunta : "Calcule a área de um Quadrado com lado de 20 cm.",
+                resposta : "400 cm",
+                alternativas:
+                {
+                    alternativa1 :"200 cm",
+                    alternativa2 :"400 cm",
+                    alternativa3 :"600 cm",
+                    alternativa4 :"800 cm",
+                }
+            }
+
+        )
+        exibirPergunta(perguntas)
+    }
+    else if(nivel == "normal" && modo == "geometria"){
+        console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        let perguntas = new Array(
+            {
+                pergunta : "Juliana possui dois tapetes de mesma área. O tapete quadrado possui lado de 4 m e o tapete retangular tem altura de 2 m e base de 8 m. Qual tapete apresenta o maior perímetro?",
+                resposta : "O tapete retangular.",
+                alternativas:
+                {
+                    alternativa1 :"O tapete retangular.",
+                    alternativa2 :"O tapete quadrado.",
+                    alternativa3 :"Os perímetros são iguais.",
+                    alternativa4 :"As áreas são iguais."
+                }
+              
+            },
+            {
+                pergunta : "<p>Sabendo que o triângulo tem 30 cm de perímetro e Carla está a 8 cm de distância de Ana e Ana está a 12 cm de distância de Paula, qual a distância de Carla e Paula?</p> <div class='text-center'> <img style='width:250px; height;250px;' src='imgs/exe_2.png'  alt='' id='imagem'> </div> ",
+                resposta : "10 cm",
+                alternativas:
+                {
+                    alternativa1 :"10 cm",
+                    alternativa2 :"11 cm",
+                    alternativa3 :"12 cm",
+                    alternativa4 :"13 cm"
+                }
+            },
+            {
+                pergunta : "Lucas decidiu vender seu carro e, para conseguir um comprador rapidamente, resolveu colocar um anúncio no jornal da cidade. Sabendo que é pedido R$ 1,50 por centímetro quadrado de publicidade, quanto Lucas teve que pagar por um anúncio retangular de base 5 cm e altura de 4 cm?",
+                resposta : "R$ 30,00",
+                alternativas:
+                {
+                    alternativa1 :"R$ 15,00",
+                    alternativa2 :"R$ 10,00",
+                    alternativa3 :"R$ 20,00",
+                    alternativa4 :"R$ 30,00",
+                }
+            },
+            {
+                pergunta : "Das formas geométricas a seguir, marque a alternativa que possui somente sólidos geométricos(três dimensões):",
+                resposta : "pirâmide, cone, prisma",
+                alternativas:
+                {
+                    alternativa1 :"cilindro, círculo, cone",
+                    alternativa2 :"esfera, quadrado, triângulo",
+                    alternativa3 :"pirâmide, cone, prisma",
+                    alternativa4 :"circunferência, prisma, pirâmide",
+                }
+            },
+            {
+                pergunta : "<p>Os sólidos de Platão são conhecidos como os únicos poliedros regulares, ou seja, todas as faces são iguais. Dos poliedros a seguir, são considerados sólidos de Platão, exceto:</p> <div class='text-center'> <img style='width:250px; height;250px;' src='imgs/solidos_platao.png'  alt='' id='imagem'> </div> ",
+                resposta : "paralelepípedo",
+                alternativas:
+                {
+                    alternativa1 :"cubo",
+                    alternativa2 :"tetraedro",
+                    alternativa3 :"paralelepípedo",
+                    alternativa4 :"icosaedro",
+                }
+            }
+
+        )
+        exibirPergunta(perguntas)
+    }
 
 
 
@@ -534,7 +662,7 @@ function exibirPergunta(perguntas, atual=0){
     })
 
   
-    pergunta_content.textContent = perguntas[perguntaAtual]['pergunta']
+    pergunta_content.innerHTML = perguntas[perguntaAtual]['pergunta']
     console.log(perguntas[perguntaAtual])
     console.log(`Estamos na pergunta : ${atual}`)
     }
