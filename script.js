@@ -565,6 +565,70 @@ function verificar(verificar=0){
         )
         exibirPergunta(perguntas)
     }
+    else if(nivel == "dificil" && modo == "geometria"){
+        console.log('Dificuldade: Fácil/ Modo: Adição')
+
+        let perguntas = new Array(
+            {
+                pergunta : "Um terreno possui formato de um trapézio, com bases medindo 15 metros e 20 metros e a altura medindo 10 metros. Se a metade desse terreno será utilizada para a construção de uma casa, então a área construída desse terreno é de:",
+                resposta : "87,5 m²",
+                alternativas:
+                {
+                    alternativa1 :"175,0 m²",
+                    alternativa2 :"105,5 m²",
+                    alternativa3 :"87,5 m²",
+                    alternativa4 :"82,5 m²"
+                }
+              
+            },
+            {
+                pergunta : "A área de um quadrado é de 2,56 m². Nessas condições, podemos afirmar que a medida do seu lado é de:",
+                resposta : "1,60 m²",
+                alternativas:
+                {
+                    alternativa1 :"1,28 m²",
+                    alternativa2 :"1,44 m²",
+                    alternativa3 :"1,55 m²",
+                    alternativa4 :"1,60 m²"
+                }
+            },
+            {
+                pergunta : "<p>Podemos afirmar que a área branca do círculo a seguir mede:</p> <div class='text-center'> <img style='width:250px; height;450px;' src='imgs/1-circulo-circunscrito.png'  alt='' id='imagem'> </div> ",
+                resposta : "21π",
+                alternativas:
+                {
+                    alternativa1 :"25π",
+                    alternativa2 :"12π",
+                    alternativa3 :"18π",
+                    alternativa4 :"21π",
+                }
+            },
+            {
+                pergunta : "Marcelo e Renato herdaram de seu pai terrenos, cada um de mesma área. O terreno de Marcelo possui formato retangular com lados medindo 18 metros e 50 metros. Sabendo que o terreno de Renato é um quadrado, a medida do lado desse terreno é:",
+                resposta : "30 metros",
+                alternativas:
+                {
+                    alternativa1 :"15 metros",
+                    alternativa2 :"20 metros",
+                    alternativa3 :"25 metros",
+                    alternativa4 :"30 metros",
+                }
+            },
+            {
+                pergunta : "Assinale a medida do lado de um quadrado, sabendo-se que o número que representa o seu perímetro é o mesmo que representa sua área.",
+                resposta : "4",
+                alternativas:
+                {
+                    alternativa1 :"5",
+                    alternativa2 :"4",
+                    alternativa3 :"6",
+                    alternativa4 :"8",
+                }
+            }
+
+        )
+        exibirPergunta(perguntas)
+    }
 
 
 
