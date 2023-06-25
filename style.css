@@ -2,6 +2,14 @@ body{
     background-color: #DDFEFE;
 }
 
+
+a:hover{
+    font-size: 20px;
+}
+#voltar:hover{
+    font-size: 40px;
+}
+
 /* Estilo para os botões */
 #select_button {
     margin: 5px;

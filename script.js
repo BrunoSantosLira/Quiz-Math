@@ -39,7 +39,6 @@ function iniciar() {
 
 function verificar(verificar=0){
     
-    let caixa_badges = window.document.getElementById('badges')
 
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -58,24 +57,8 @@ function verificar(verificar=0){
 
     if(nivel == "facil" && modo == "adicao e subtracao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-         //criando o badges
-        caixa_badges.innerHTML = ''
-
-        let badge = window.document.createElement('span')
-        badge.classList = 'badge badge-pill badge-info float-right'
-
-        let badge_nivel = window.document.createElement('span')
-        badge_nivel.classList = 'badge badge-pill badge-success float-right'
-        
-        badge_nivel.innerText = nivel
-        badge.innerText = modo
-
-        caixa_badges.appendChild(badge_nivel)
-        caixa_badges.appendChild(badge)
-
-
-
+        Criar_badge("adicao e subtracao","facil")
+         
         let perguntas = new Array(
             {
                 pergunta : "A um número foi somado 7854 e o resultado obtido foi 20000. Que número é esse??",
@@ -140,22 +123,7 @@ function verificar(verificar=0){
 
     }else if(nivel == "normal" && modo == "adicao e subtracao" ){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        
-         //criando o badges
-         caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-info float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-warning  float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("adicao e subtracao","normal")
 
         let perguntas = new Array(
             {
@@ -220,20 +188,7 @@ function verificar(verificar=0){
 
     }else if(nivel == "dificil" && modo == "adicao e subtracao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-info float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-danger  float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("adicao e subtracao","dificil")
 
         let perguntas = new Array(
             {
@@ -298,20 +253,7 @@ function verificar(verificar=0){
     }
     else if(nivel == "facil" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-primary float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-success  float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("multiplicacao_divisao","facil")
 
         let perguntas = new Array(
             {
@@ -375,19 +317,7 @@ function verificar(verificar=0){
         exibirPergunta(perguntas)
     }else if(nivel == "normal" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-primary float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-warning float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("multiplicacao_divisao","normal")
 
         let perguntas = new Array(
             {
@@ -451,20 +381,7 @@ function verificar(verificar=0){
         exibirPergunta(perguntas)
     }else if(nivel == "dificil" && modo == "multiplicacao_divisao"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-primary float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-danger  float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("multiplicacao_divisao","dificil")
 
         let perguntas = new Array(
             {
@@ -529,19 +446,8 @@ function verificar(verificar=0){
     }
     else if(nivel == "facil" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-dark float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-success  float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        
+        Criar_badge("geometria","facil")
 
         let perguntas = new Array(
             {
@@ -606,20 +512,7 @@ function verificar(verificar=0){
     }
     else if(nivel == "normal" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-dark float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-warning float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("geometria","normal")
 
         let perguntas = new Array(
             {
@@ -684,22 +577,7 @@ function verificar(verificar=0){
     }
     else if(nivel == "dificil" && modo == "geometria"){
         console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        console.log('Dificuldade: Fácil/ Modo: Adição')
-
-        caixa_badges.innerHTML = ''
- 
-         let badge = window.document.createElement('span')
-         badge.classList = 'badge badge-pill badge-dark float-right'
- 
-         let badge_nivel = window.document.createElement('span')
-         badge_nivel.classList = 'badge badge-pill badge-danger float-right'
-         
-         badge_nivel.innerText = nivel
-         badge.innerText = modo
- 
-         caixa_badges.appendChild(badge_nivel)
-         caixa_badges.appendChild(badge)
+        Criar_badge("geometria","dificil")
 
         let perguntas = new Array(
             {
@@ -799,14 +677,17 @@ function exibirPergunta(perguntas, atual=0){
         selecione_caixa.innerHTML = ''
 
         let voltar_menu_caixa = window.document.getElementById('prox_pergunta');
-        voltar_menu_caixa.innerHTML = `<i style="cursor:pointer; color:blue;" onclick="verificar(1)" class="fa-solid fa-rotate-left fa-2xl"></i> <a href="index.html"> <i class="fa-solid fa-house fa-2xl"></i> </a> `
+        voltar_menu_caixa.innerHTML = `<i id="voltar" style="cursor:pointer; color:blue;" onclick="verificar(1)" class="fa-solid fa-rotate-left fa-2xl"></i> <a href="index.html"> <i class="fa-solid fa-house fa-2xl"></i> </a> `
 
 
         let caixa_badges = window.document.getElementById('badges')
         caixa_badges.innerHTML = ''
- 
 
-        pergunta_content.innerHTML = `Acertos: ${acertos} <br> Erros: ${erros}`
+        let link = window.document.getElementById('link_superior')
+        link.innerHTML = "<i class='fa-brands fa-github fa-2xl'></i>"
+        link.href = "https://github.com/BrunoSantosLira"
+
+        pergunta_content.innerHTML = `Acertos: ${acertos} <br> Erros: ${erros} <br> <p style="color:yellow">Obrigado por jogar!!!</p> <div class='d-flex justify-content-center align-items-center'> <div> <iframe src="https://giphy.com/embed/Lpa8zu1JVeu0v2EI1B" width="150" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p> </div> </div>`
 
 
     }else{
@@ -909,4 +790,39 @@ function botão_prox_pergunta(perguntas,atual){
        });
 
     caixa_prox_pergunta.appendChild(btn_prox)
+}
+
+function Criar_badge(modo,nivel){
+    //criando o badges
+    let caixa_badges = window.document.getElementById('badges')
+    caixa_badges.innerHTML = ''
+
+    let badge = window.document.createElement('span')
+
+    if(modo == 'adicao e subtracao'){
+        badge.classList = 'badge badge-pill badge-info float-right'
+    }else if (modo == 'multiplicacao_divisao'){
+        badge.classList = 'badge badge-pill badge-primary float-right'
+    }else if(modo == "geometria"){
+        badge.classList = 'badge badge-pill badge-dark float-right'
+    }
+
+    let badge_nivel = window.document.createElement('span')
+
+    if(nivel == "facil"){
+        badge_nivel.classList = 'badge badge-pill badge-success float-right'
+    }else if(nivel == "normal") {
+        badge_nivel.classList = 'badge badge-pill badge-warning float-right'
+    }else if (nivel == "dificil"){
+        badge_nivel.classList = 'badge badge-pill badge-danger float-right'
+    }
+    
+    
+    badge_nivel.innerText = nivel
+    badge.innerText = modo
+
+    //adicionando os badges no elemento div
+    caixa_badges.appendChild(badge_nivel)
+    caixa_badges.appendChild(badge)
+
 }
