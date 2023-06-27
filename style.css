@@ -50,7 +50,7 @@ a:hover{
   
 
   #btn0:active, #btn1:active, #btn2:active  {
-    background-color: red;
+    background-color: rgb(10, 157, 255);
     color: white;
   }
 
