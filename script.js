@@ -655,7 +655,14 @@ function exibirPergunta(perguntas, atual=0){
     selecione_caixa.innerHTML = 'Selecione a resposta correta'
 
    
+    let caixa_badges_perguntas = window.document.getElementById('badges_pergunta')
+    caixa_badges_perguntas.innerHTML = ''
 
+    let badge_pergunta = window.document.createElement('span')
+    badge_pergunta.classList = 'badge badge-pill badge-primary float-right'
+    badge_pergunta.innerText = atual + 1
+
+    caixa_badges_perguntas.appendChild(badge_pergunta)
 
     //caixa pergunta   
     let pergunta_content = document.getElementById('pergunta')
@@ -683,9 +690,10 @@ function exibirPergunta(perguntas, atual=0){
         let caixa_badges = window.document.getElementById('badges')
         caixa_badges.innerHTML = ''
 
-        let link = window.document.getElementById('link_superior')
-        link.innerHTML = "<i class='fa-brands fa-github fa-2xl'></i>"
-        link.href = "https://github.com/BrunoSantosLira"
+        let caixa_badges_perguntas = window.document.getElementById('badges_pergunta')
+        caixa_badges_perguntas.innerHTML = ''
+
+
 
         pergunta_content.innerHTML = `Acertos: ${acertos} <br> Erros: ${erros} <br> <p style="color:yellow">Obrigado por jogar!!!</p> <div class='d-flex justify-content-center align-items-center'> <div> <iframe src="https://giphy.com/embed/Lpa8zu1JVeu0v2EI1B" width="150" height="150" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p> </div> </div>`
 
@@ -747,6 +755,11 @@ function exibirPergunta(perguntas, atual=0){
   
     pergunta_content.innerHTML = perguntas[perguntaAtual]['pergunta']
     console.log(perguntas[perguntaAtual])
+
+    
+  
+
+
     console.log(`Estamos na pergunta : ${atual}`)
     }
 
