@@ -8,7 +8,7 @@ var select = document.getElementById("modos");
 for (var i = 0; i < select.options.length; i++) {
   var option = select.options[i];
   var button = document.createElement("button");
-  button.id = 'select_button'
+  button.id = `btn${i}`
   button.innerHTML = option.innerHTML;
   button.value = option.value;
   button.addEventListener("click", function(event) {
@@ -23,6 +23,7 @@ select.style.display = "none";
 
 function iniciar() {
     //Pegando valores
+  
     let nivel_selecionado = window.document.getElementById('niveis').value
     let modo_selecionado = window.document.getElementById("modos").value
 

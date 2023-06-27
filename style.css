@@ -11,22 +11,53 @@ a:hover{
 }
 
 /* Estilo para os botões */
-#select_button {
+#btn0 {
     margin: 5px;
     padding: 10px;
-    background-color: #c1ce5b;
+    background-color: #52b823;
     border: none;
     cursor: pointer;
-  }
+}
+
+#btn1 {
+    margin: 5px;
+    padding: 10px;
+    background-color: #f2df0d;
+    border: none;
+    cursor: pointer;
+} 
+
+#btn2 {
+    margin: 5px;
+    padding: 10px;
+    background-color: #b03737;
+    border: none;
+    cursor: pointer;
+    color: white;
+} 
   
   /* Estilo para o botão selecionado */
   button.selected {
-    background-color: #e81313;
+    background-color: #ffe608;
+  }
+
+  /*
+  #btn0, #btn1, #btn2 {
+     transition: background-color 0.3s, color 0.3s;
+  }
+  */
+
+  
+
+  #btn0:active, #btn1:active, #btn2:active  {
+    background-color: red;
+    color: white;
   }
 
 
 #titulo{
     color: white;
+    font-weight: bold;
 }
 
 #pergunta{
